@@ -1,0 +1,84 @@
+﻿
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/layout/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body id="top">
+    <div>
+        @{Html.RenderPartial("_Header");}
+        @{Html.RenderPartial("_Banner");}
+        <nav id="mainav" class="hoc clear">
+
+            <ul class="clear">
+                <li class="active"><a href="~/Views/Shared/MvcLayout.cshtml">Home</a></li>
+                <li>
+                    <a class="drop" href="#">Pages</a>
+                    <ul>
+                        <li><a href="pages/gallery.html">Gallery</a></li>
+                        <li><a href="pages/full-width.html">Full Width</a></li>
+                        <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+                        <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+                        <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+                        <li><a href="pages/font-icons.html">Font Icons</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="drop" href="#">Dropdown</a>
+                    <ul>
+                        <li><a href="#">Level 2</a></li>
+                        <li>
+                            <a class="drop" href="#">Level 2 + Drop</a>
+                            <ul>
+                                <li><a href="#">Level 3</a></li>
+                                <li><a href="#">Level 3</a></li>
+                                <li><a href="#">Level 3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Level 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="/About/About">ABOUT</a></li>
+                <li><a href="/Contact/Contract">CONTACT</a></li>
+                <li><a href="/Home/Index">LOGIN</a></li>
+
+            </ul>
+
+            <form action="#"><select><option selected="selected" value="">MENU</option><option value="index.html">Home</option><option value="#">Pages</option><option value="pages/gallery.html">- - Gallery</option><option value="pages/full-width.html">- - Full Width</option><option value="pages/sidebar-left.html">- - Sidebar Left</option><option value="pages/sidebar-right.html">- - Sidebar Right</option><option value="pages/basic-grid.html">- - Basic Grid</option><option value="pages/font-icons.html">- - Font Icons</option><option value="#">Dropdown</option><option value="#">- - Level 2</option><option value="#">- - Level 2 + Drop</option><option value="#">- - - Level 3</option><option value="#">- - - Level 3</option><option value="#">- - - Level 3</option><option value="#">- - Level 2</option><option value="#">Link Text</option><option value="#">Link Text</option><option value="#">Link Text</option><option value="#">Long Link Text</option></select></form>
+        </nav>
+
+        <div class="wrapper bgded overlay" style="background-image:url('images/demo/backgrounds/01.png');">
+            <div id="pageintro" class="hoc clear">
+
+                <article>
+                    <p>Aenean ac nisl vitae lobortis</p>
+                    <h3 class="heading">Ultricies fusce sed ligula</h3>
+                    <p>Sem suscipit mollis praesent volutpat placerat nisl suspendisse</p>
+                    <footer><a class="btn" href="#">Potenti nunc nec urna</a></footer>
+                </article>
+
+            </div>
+        </div>
+    </div>
+
+    
+
+    @RenderBody();
+ 
+    @{Html.RenderPartial("_Footer");}
+    
+    <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+
+
+    <script src="layout/scripts/jquery.min.js"></script>
+    <script src="layout/scripts/jquery.backtotop.js"></script>
+    <script src="layout/scripts/jquery.mobilemenu.js"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+            </html>
